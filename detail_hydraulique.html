@@ -143,13 +143,22 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+</center>
+
+<br/><br/>
+    <center>
+<button id="moreInformation" type="button" onclick="displayMorInformations()" class="btn btn-primary" style="margin : 0 auto;">Voir plus de références &nbsp <i class="fas fa-arrow-right"></i></button>		   
+<br/><br/><br/><br/>
+</center>
+
+<div id="blockMoreReferences">
+  <p>Plus de détails</p>
+  </div>
 <center>
+  <button type="button" id="lessInformation" onclick="displaylessInformations()" class="btn btn-warning" style="margin : 0 auto;">Voir moins de références &nbsp <i class="fas fa-arrow-right"></i></button> 
+</center>
 
 <br/><br/>
-<br/><br/>
-                
-
-
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="footer-top">
@@ -191,6 +200,32 @@
     <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+      document.getElementById("blockMoreReferences").style.display="none";
+      document.getElementById("blockMoreReferences").style.visibility="none";
+      document.getElementById("lessInformation").style.display="none";
+      document.getElementById("lessInformation").style.visibility="none";
+      document.getElementById("moreInformation").style.display="inline";
+      document.getElementById("moreInformation").style.visibility="visible";
+    
+    function displayMorInformations(){
+      document.getElementById("blockMoreReferences").style.display="inline";
+      document.getElementById("blockMoreReferences").style.visibility="visible";
+      document.getElementById("moreInformation").style.display="none";
+      document.getElementById("moreInformation").style.visibility="none";
+      document.getElementById("lessInformation").style.display="inline";
+      document.getElementById("lessInformation").style.visibility="visible"; 
+    }
+
+    function displaylessInformations(){
+       document.getElementById("blockMoreReferences").style.display="none";
+       document.getElementById("blockMoreReferences").style.visibility="none";
+       document.getElementById("moreInformation").style.display="inline";
+       document.getElementById("moreInformation").style.visibility="visible";
+       document.getElementById("lessInformation").style.display="none";
+       document.getElementById("lessInformation").style.visibility="none";
+    }
+  </script>
 
 </body>
 
